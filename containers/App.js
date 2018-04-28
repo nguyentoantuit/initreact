@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import InputPreview from '../components/InputPreview';
 import { connect } from 'react-redux';
 import { setMessage } from '../actions/message';
+import { Link } from 'react-router-dom';
 
 class App extends Component {
 
@@ -17,6 +18,9 @@ class App extends Component {
                     value={this.props.messageReducer.message}
                     onChange={this._onchange}
                 />
+                <Link to="/about">
+                    <button>Go to About</button>
+                </Link>
             </div>
         );
     }
